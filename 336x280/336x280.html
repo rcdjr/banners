@@ -11,7 +11,6 @@
   <link href="gwdpagedeck_style.css" rel="stylesheet" data-version="10" data-exports-type="gwd-pagedeck">
   <link href="gwddoubleclick_style.css" rel="stylesheet" data-version="16" data-exports-type="gwd-doubleclick">
   <link href="gwdimage_style.css" rel="stylesheet" data-version="10" data-exports-type="gwd-image">
-  <link href="gwdtaparea_style.css" rel="stylesheet" data-version="6" data-exports-type="gwd-taparea">
   <style type="text/css" id="gwd-lightbox-style">
     .gwd-lightbox {
       overflow: hidden;
@@ -330,13 +329,6 @@
     #page1.gwd-play-animation .gwd-gen-1daogwdanimation {
       animation: gwd-gen-1daogwdanimation_gwd-keyframes 0.1s linear 10.5s 1 normal forwards;
     }
-    .gwd-taparea-44cl {
-      position: absolute;
-      width: 200px;
-      height: 140px;
-      left: 70px;
-      top: 142px;
-    }
     @keyframes gwd-gen-ampfgwdanimation_gwd-keyframes {
       0% {
         opacity: 0;
@@ -370,47 +362,22 @@
   <script data-source="https://s0.2mdn.net/ads/studio/Enabler.js" data-exports-type="gwd-doubleclick" src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
   <script data-source="gwddoubleclick_min.js" data-version="16" data-exports-type="gwd-doubleclick" src="gwddoubleclick_min.js"></script>
   <script data-source="gwdimage_min.js" data-version="10" data-exports-type="gwd-image" src="gwdimage_min.js"></script>
-  <script data-source="gwdtaparea_min.js" data-version="6" data-exports-type="gwd-taparea" src="gwdtaparea_min.js"></script>
   <script type="text/javascript" gwd-events="support" src="gwd-events-support.1.0.js"></script>
   <script type="text/javascript" gwd-events="handlers">
-    gwd.auto_BtsaibaClick = function(event) {
+    gwd.auto_Page1Event_1 = function(event) {
       // GWD Predefined Function
-      gwd.actions.gwdDoubleclick.exit('gwd-ad', 'clickTag', 'http://colegiosantaamalia.com.br/', true, true, 'page1');
-    };
-    gwd.auto_BtagendeClick = function(event) {
-      // GWD Predefined Function
-      gwd.actions.gwdDoubleclick.exit('gwd-ad', 'clickTag_2', 'http://colegiosantaamalia.com.br/', true, true, 'page1');
-    };
-    gwd.auto_Gwd_taparea_1Click = function(event) {
-      // GWD Predefined Function
-      gwd.actions.gwdDoubleclick.exit('gwd-ad', 'clickTag_1', 'http://colegiosantaamalia.com.br/', true, true, 'page1');
-    };
-    gwd.auto_Page1Event_3 = function(event) {
-      // GWD Predefined Function
-      gwd.actions.timeline.gotoAndPlay('page1', 'start1');
-    };
-    gwd.auto_Gwd_taparea_1Click1 = function(event) {
-      // GWD Predefined Function
-      gwd.actions.gwdDoubleclick.exit('gwd-ad', 'clickTag_3', 'http://colegiosantaamalia.com.br/', true, true, 'page1');
+      gwd.actions.timeline.gotoAndPlayNTimes('page1', 'start1', 1, 'event-1');
     };
   </script>
   <script type="text/javascript" gwd-events="registration">
     // Support code for event handling in Google Web Designer
      // This script block is auto-generated. Please do not edit!
     gwd.actions.events.registerEventHandlers = function(event) {
-      gwd.actions.events.addHandler('btsaiba', 'click', gwd.auto_BtsaibaClick, false);
-      gwd.actions.events.addHandler('btagende', 'click', gwd.auto_BtagendeClick, false);
-      gwd.actions.events.addHandler('gwd-taparea_1', 'click', gwd.auto_Gwd_taparea_1Click, false);
-      gwd.actions.events.addHandler('page1', 'event-3', gwd.auto_Page1Event_3, false);
-      gwd.actions.events.addHandler('gwd-taparea_1', 'click', gwd.auto_Gwd_taparea_1Click1, false);
+      gwd.actions.events.addHandler('page1', 'event-1', gwd.auto_Page1Event_1, false);
       gwd.actions.timeline.captureAnimationEnd(document.body);
     };
     gwd.actions.events.deregisterEventHandlers = function(event) {
-      gwd.actions.events.removeHandler('btsaiba', 'click', gwd.auto_BtsaibaClick, false);
-      gwd.actions.events.removeHandler('btagende', 'click', gwd.auto_BtagendeClick, false);
-      gwd.actions.events.removeHandler('gwd-taparea_1', 'click', gwd.auto_Gwd_taparea_1Click, false);
-      gwd.actions.events.removeHandler('page1', 'event-3', gwd.auto_Page1Event_3, false);
-      gwd.actions.events.removeHandler('gwd-taparea_1', 'click', gwd.auto_Gwd_taparea_1Click1, false);
+      gwd.actions.events.removeHandler('page1', 'event-1', gwd.auto_Page1Event_1, false);
       gwd.actions.timeline.releaseAnimationEnd(document.body);
     };
     document.addEventListener("DOMContentLoaded", gwd.actions.events.registerEventHandlers);
@@ -420,9 +387,6 @@
 
 <body>
   <gwd-doubleclick id="gwd-ad" polite-load="">
-    <gwd-metric-configuration>
-      <gwd-metric-event source="gwd-taparea_1" event="tapareaexit" metric="" exit="Exit"></gwd-metric-event>
-    </gwd-metric-configuration>
     <div is="gwd-pagedeck" class="gwd-page-container" id="pagedeck">
       <div is="gwd-page" id="page1" class="gwd-page-wrapper gwd-page-size gwd-lightbox" data-gwd-width="100%" data-gwd-height="100%" data-gwd-animation-labels="start1,0">
         <div class="gwd-page-content gwd-page-size">
@@ -437,16 +401,9 @@
           <img is="gwd-image" source="assets/botaoagende.png" id="btagende" class="gwd-img-15hm gwd-gen-1kt4gwdanimation">
           <img is="gwd-image" source="assets/botaosaiba.png" id="btsaiba" class="gwd-img-2ygf gwd-gen-y6f5gwdanimation">
           <div class="gwd-animation-event event-1-animation" data-event-name="event-1" data-event-time="12500"></div>
-          <div class="gwd-animation-event event-2-animation" data-event-name="event-2" data-event-time="400"></div>
-          <gwd-taparea id="gwd-taparea_1" class="gwd-taparea-44cl"></gwd-taparea>
-          <div class="gwd-animation-event event-3-animation" data-event-name="event-3" data-event-time="500"></div>
         </div>
       </div>
     </div>
-    <gwd-exit metric="clickTag" url="http://colegiosantaamalia.com.br/"></gwd-exit>
-    <gwd-exit metric="clickTag_2" url="http://colegiosantaamalia.com.br/"></gwd-exit>
-    <gwd-exit metric="clickTag_1" url="http://colegiosantaamalia.com.br/"></gwd-exit>
-    <gwd-exit metric="clickTag_3" url="http://colegiosantaamalia.com.br/"></gwd-exit>
   </gwd-doubleclick>
   <script type="text/javascript" id="gwd-init-code">
     (function() {
